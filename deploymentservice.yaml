@@ -31,7 +31,7 @@ spec:
    spec:
      containers:
        - name: helloworl-kubernetes
-         image: docker pull ezepalmez/rest-client:latest
+         image: docker pull ezepalmez/demo-metrics:v1
          imagePullPolicy: IfNotPresent
          ports:
            - containerPort: 8080
