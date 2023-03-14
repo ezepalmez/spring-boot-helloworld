@@ -31,7 +31,7 @@ spec:
    spec:
      containers:
        - name: helloworl-kubernetes
-         image: docker pull ezepalmez/hello-world:sha-cdf0875
+         image: docker pull ezepalmez/gh-prueba:sha-c1f6551
          imagePullPolicy: IfNotPresent
          ports:
            - containerPort: 8080
