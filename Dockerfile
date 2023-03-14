@@ -5,4 +5,4 @@ COPY ${JAR_FILE} application.jar
 
 WORKDIR /
 # Run the jar file 
-ENTRYPOINT ["java","-Dserver.port=10000","-Djava.security.egd=file:/dev/./urandom","-jar",${JAR_FILE}]
+ENTRYPOINT ["java","-Dserver.port=8080","-Djava.security.egd=file:/dev/./urandom","-jar",${JAR_FILE}]
