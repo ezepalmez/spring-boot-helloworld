@@ -5,13 +5,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  *
- * @author oyeyinka.onaolapo
+ * 
  *
  */
 
 @RestController
 public class HelloWorldController {
-    @RequestMapping("/")
+    @RequestMapping("/api")
     public String hello()
     {
         return "Hello Everyone";
