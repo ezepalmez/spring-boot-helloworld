@@ -2,8 +2,8 @@ apiVersion: v1
 kind: Service
 apiVersion: v1
 metadata:
- name: app-kubernetes-service
- namespace: apps
+ name: helloworl-service
+ namespace: jenkins
 spec:
  type: NodePort 
  ports:
@@ -12,26 +12,26 @@ spec:
     protocol: TCP
     name: http
  selector:
-   app: app-kubernetes
+   app: helloworl-kubernetes
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
- name: app-deployment
- namespace: apps
+ name: helloworl-deployment
+ namespace: jenkins
 spec:
  replicas: 3
  selector:
    matchLabels:
-     app: app-kubernetes
+     app: helloworl-kubernetes
  template:
    metadata:
      labels:
-       app: app-kubernetes
+       app: helloworl-kubernetes
    spec:
      containers:
-       - name: app-kubernetes
-         image: ezepalmez/application:latest
+       - name: helloworl-kubernetes
+         image: ezepalmez/k8sdemo:22f52acf
          imagePullPolicy: IfNotPresent
          ports:
            - containerPort: 8080
